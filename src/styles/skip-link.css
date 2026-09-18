@@ -1,0 +1,11 @@
+.skip-link {
+  background: var(--color-surface-raised);
+  padding-block: var(--space-sm);
+  padding-inline: var(--space-lg);
+  position: absolute;
+  top: -3em;
+  z-index: var(--z-raised);
+}
+.skip-link:focus {
+  top: 0;
+}
