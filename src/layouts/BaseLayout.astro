@@ -34,7 +34,7 @@ const {
   ogTitle,
   ogType,
   title,
-  mode
+  mode,
 } = Astro.props;
 ---
 
@@ -56,8 +56,9 @@ const {
     />
   </head>
   <body>
+    <a href="#content" class="skip-link">Skip to main content</a>
     <Header />
-    <main class="wrapper">
+    <main id="content" class="wrapper">
       <article>
         <slot />
       </article>
