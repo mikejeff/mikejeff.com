@@ -1,12 +1,13 @@
 .site-footer {
   margin-block-start: var(--space-lg);
-    font-size: var(--text-sm);
+  font-size: var(--text-sm);
 }
 
 .site-footer__inner-wrap {
   --flow-space: var(--space-sm);
 
-  border-top: var(--border-width-thin) var(--border-style) var(--color-border-quiet);
+  border-top: var(--border-width-thin) var(--border-style)
+    var(--color-border-quiet);
   padding-block: var(--space-lg);
 }
 
@@ -31,5 +32,4 @@
   p {
     line-height: var(--leading-none);
   }
-
 }
