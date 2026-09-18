@@ -34,7 +34,7 @@ const {
   ogTitle,
   ogType,
   title,
-  mode
+  mode,
 } = Astro.props;
 ---
 
@@ -56,12 +56,26 @@ const {
     />
   </head>
   <body>
+    <a href="#content" class="skip-link">Skip to main content</a>
     <Header />
-    <main class="wrapper">
+    <main id="content" class="wrapper">
       <article>
         <slot />
       </article>
     </main>
     <Footer />
   </body>
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -3em;
+      background: var(--color-surface-raised);
+      padding-block: var(--space-sm);
+      z-index: 1;
+      padding-inline: var(--space-lg);
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
 </html>
