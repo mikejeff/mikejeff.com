@@ -1,3 +1,33 @@
+:root {
+  --color-border-normal: oklch(0.8 0.026 42.14);
+  --color-border-quiet: oklch(0.9 0.026 42.14);
+  --color-fill-normal: oklch(0.99 0.02 86.35);
+  --color-selection-bg: oklch(0.659 0.179 22.98 / 35%);
+  --color-selection-fg: black;
+  --color-surface-default: oklch(0.95 0.02 86.35);
+  --color-surface-lowered: oklch(0.76 0.02 86.35);
+  --color-surface-raised: oklch(0.99 0.02 86.35);
+  --color-text-link: oklch(0.434 0.146 25.31);
+  --color-text-loud: oklch(0.17 0.02 86.35);
+  --color-text-normal: oklch(0.28 0.02 86.35);
+  --color-text-quieter: oklch(0.52 0.02 86.35);
+}
+
+[data-theme="dark"] {
+  --color-border-normal: oklch(0.708 0 0);
+  --color-border-quiet: oklch(0.371 0 0);
+  --color-fill-normal: black;
+  --color-selection-bg: oklch(0.854 0.068 87.48);
+  --color-selection-fg: black;
+  --color-surface-default: oklch(0.205 0 0);
+  --color-surface-lowered:  oklch(0.145 0 0);
+  --color-surface-raised:  oklch(0.269 0 0);
+  --color-text-link: oklch(0.854 0.068 87.48);
+  --color-text-loud: oklch(0.985 0 0);
+  --color-text-normal: oklch(0.87 0 0);
+  --color-text-quieter: oklch(0.5990 0 0);
+}
+
 /* ============================================
    Browser Consistency
    ============================================ */
@@ -158,7 +188,7 @@ q {
 
 hr {
   border: 0;
-  border-block-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-surface-border, currentColor);
+  border-block-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
   margin-block: calc(var(--flow-space, var(--space-xl, 2rem)) * var(--density-scale, 1));
 }
 
@@ -559,7 +589,7 @@ svg[role="img"] {
    ============================================ */
 
 table {
-  border: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-surface-border, currentColor);
+  border: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
   border-collapse: collapse;
   width: 100%;
 }
@@ -581,19 +611,19 @@ thead th {
 }
 
 th:not(:only-of-type) {
-  border-block-end: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-surface-border, currentColor);
+  border-block-end: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
 }
 
 th:only-of-type {
-  border-inline-end: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-surface-border, currentColor);
+  border-inline-end: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
 }
 
 :is(th, td)~ :is(th, td) {
-  border-inline-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-surface-border, currentColor);
+  border-inline-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
 }
 
 tr+tr :is(th, td) {
-  border-block-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-surface-border, currentColor);
+  border-block-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
 }
 
 caption {

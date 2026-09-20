@@ -93,7 +93,7 @@ CUSTOM PROPERTIES AND CONFIGURATION
     border-inline-start-style: solid;
     border-inline-start-color: var(
         --prose-blockquote-border-color,
-        var(--color-surface-border, currentColor)
+        var(--color-border-normal, currentColor)
     );
 }
 
