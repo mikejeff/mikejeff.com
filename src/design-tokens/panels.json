@@ -6,9 +6,6 @@
     "border-style": {
       "$value": "{border.style}"
     },
-    "border-color": {
-      "$value": "{color.border.normal}"
-    },
     "border-width": {
       "$value": "{border.width.thin}"
     }
