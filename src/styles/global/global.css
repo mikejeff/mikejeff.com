@@ -20,12 +20,12 @@
   --color-selection-bg: oklch(0.854 0.068 87.48);
   --color-selection-fg: black;
   --color-surface-default: oklch(0.205 0 0);
-  --color-surface-lowered:  oklch(0.145 0 0);
-  --color-surface-raised:  oklch(0.269 0 0);
+  --color-surface-lowered: oklch(0.145 0 0);
+  --color-surface-raised: oklch(0.269 0 0);
   --color-text-link: oklch(0.854 0.068 87.48);
   --color-text-loud: oklch(0.985 0 0);
   --color-text-normal: oklch(0.87 0 0);
-  --color-text-quieter: oklch(0.5990 0 0);
+  --color-text-quieter: oklch(0.599 0 0);
 }
 
 /* ============================================
@@ -108,19 +108,27 @@ h6 {
 }
 
 h1 {
-  font-size: calc(var(--heading-1, var(--text-4xl, 2.25rem)) * var(--type-scale, 1));
+  font-size: calc(
+    var(--heading-1, var(--text-4xl, 2.25rem)) * var(--type-scale, 1)
+  );
 }
 
 h2 {
-  font-size: calc(var(--heading-2, var(--text-3xl, 1.875rem)) * var(--type-scale, 1));
+  font-size: calc(
+    var(--heading-2, var(--text-3xl, 1.875rem)) * var(--type-scale, 1)
+  );
 }
 
 h3 {
-  font-size: calc(var(--heading-3, var(--text-2xl, 1.5rem)) * var(--type-scale, 1));
+  font-size: calc(
+    var(--heading-3, var(--text-2xl, 1.5rem)) * var(--type-scale, 1)
+  );
 }
 
 h4 {
-  font-size: calc(var(--heading-4, var(--text-xl, 1.25rem)) * var(--type-scale, 1));
+  font-size: calc(
+    var(--heading-4, var(--text-xl, 1.25rem)) * var(--type-scale, 1)
+  );
 }
 
 h5 {
@@ -188,8 +196,11 @@ q {
 
 hr {
   border: 0;
-  border-block-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
-  margin-block: calc(var(--flow-space, var(--space-xl, 2rem)) * var(--density-scale, 1));
+  border-block-start: var(--border-width-thin, 1px) var(--border-style, solid)
+    var(--color-border-normal, currentColor);
+  margin-block: calc(
+    var(--flow-space, var(--space-xl, 2rem)) * var(--density-scale, 1)
+  );
 }
 
 abbr {
@@ -237,8 +248,8 @@ ol {
   padding: 0;
 }
 
-li>ul,
-li>ol {
+li > ul,
+li > ol {
   margin-inline-start: 0.25em;
 }
 
@@ -267,13 +278,14 @@ dt {
    ============================================ */
 
 /* Form Structure */
-form>*+* {
+form > * + * {
   margin-block-start: calc(var(--space-sm, 1rem) * var(--density-scale, 1));
 }
 
 fieldset {
   margin-inline: 0;
-  border: var(--panel-border-width, 1px) var(--border-style, solid) var(--panel-border-color, currentColor);
+  border: var(--panel-border-width, 1px) var(--border-style, solid)
+    var(--panel-border-color, currentColor);
   padding: calc(var(--space-sm, 1rem) * var(--density-scale, 1));
 }
 
@@ -296,7 +308,9 @@ label:not(:has(input[type="checkbox"])):not(:has(input[type="radio"])) {
 }
 
 /* Full width for labels containing text inputs/textareas/selects */
-label:has(input:not([type="button"],
+label:has(
+  input:not(
+    [type="button"],
     [type="checkbox"],
     [type="color"],
     [type="file"],
@@ -304,15 +318,17 @@ label:has(input:not([type="button"],
     [type="image"],
     [type="radio"],
     [type="reset"],
-    [type="submit"]),
+    [type="submit"]
+  ),
   textarea,
-  select) {
+  select
+) {
   width: 100%;
 }
 
 /* Spacing between label and input */
-label+ :is(input:not([type="checkbox"], [type="radio"]), textarea, select),
-label> :is(input:not([type="checkbox"], [type="radio"]), textarea, select) {
+label + :is(input:not([type="checkbox"], [type="radio"]), textarea, select),
+label > :is(input:not([type="checkbox"], [type="radio"]), textarea, select) {
   margin-block-start: 0.5em;
 }
 
@@ -332,7 +348,7 @@ label:has(input[type="radio"]) {
   -webkit-user-select: none;
 
   &,
-  +label {
+  + label {
     cursor: pointer;
   }
 
@@ -360,7 +376,10 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
-  border-radius: min(calc(var(--form-control-toggle-size) * 0.375), var(--radius-md));
+  border-radius: min(
+    calc(var(--form-control-toggle-size) * 0.375),
+    var(--radius-md)
+  );
 }
 
 /* Radio-specific border-radius */
@@ -369,7 +388,8 @@ input[type="radio"] {
 }
 
 /* Text inputs, textareas, selects */
-input:not([type="button"],
+input:not(
+  [type="button"],
   [type="checkbox"],
   [type="color"],
   [type="file"],
@@ -378,7 +398,8 @@ input:not([type="button"],
   [type="radio"],
   [type="range"],
   [type="reset"],
-  [type="submit"]),
+  [type="submit"]
+),
 textarea,
 select {
   width: 100%;
@@ -392,7 +413,9 @@ select {
   vertical-align: middle;
 
   background-color: var(--form-control-background-color, transparent);
-  border: var(--form-control-border-width, 1px) var(--form-control-border-style, solid) var(--form-control-border-color, currentColor);
+  border: var(--form-control-border-width, 1px)
+    var(--form-control-border-style, solid)
+    var(--form-control-border-color, currentColor);
   border-radius: var(--form-control-radius, 0.25rem);
 
   &::placeholder {
@@ -429,7 +452,8 @@ input[type="color"] {
   padding: calc(var(--form-control-border-width, 1px) * 2);
 
   background: transparent;
-  border: var(--form-control-border-width, 1px) var(--border-style, solid) var(--form-control-border-color, currentColor);
+  border: var(--form-control-border-width, 1px) var(--border-style, solid)
+    var(--form-control-border-color, currentColor);
   border-radius: var(--form-control-radius, 0.25rem);
   cursor: pointer;
 
@@ -440,12 +464,18 @@ input[type="color"] {
 
   &::-webkit-color-swatch {
     border: none;
-    border-radius: calc(var(--form-control-radius, 0.25rem) - var(--form-control-border-width, 1px) * 3);
+    border-radius: calc(
+      var(--form-control-radius, 0.25rem) -
+        var(--form-control-border-width, 1px) * 3
+    );
   }
 
   &::-moz-color-swatch {
     border: none;
-    border-radius: calc(var(--form-control-radius, 0.25rem) - var(--form-control-border-width, 1px) * 3);
+    border-radius: calc(
+      var(--form-control-radius, 0.25rem) -
+        var(--form-control-border-width, 1px) * 3
+    );
   }
 }
 
@@ -470,9 +500,12 @@ select {
   cursor: pointer;
 
   /* CSS caret instead of SVG */
-  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%);
-  background-position: calc(100% - 1em) center, calc(100% - 0.75em) center;
+  background-position:
+    calc(100% - 1em) center,
+    calc(100% - 0.75em) center;
   background-size: 0.25em 0.25em;
   background-repeat: no-repeat;
   padding-inline-end: 2.5em;
@@ -486,7 +519,10 @@ code,
 kbd,
 samp {
   font-family: var(--font-mono, ui-monospace, monospace);
-  background: var(--color-fill-normal, color-mix(in srgb, currentColor 10%, transparent));
+  background: var(
+    --color-fill-normal,
+    color-mix(in srgb, currentColor 10%, transparent)
+  );
   padding-inline: 0.25em;
   hyphens: none;
   tab-size: 2;
@@ -503,7 +539,7 @@ pre {
   padding: calc(var(--space-sm, 0.875rem) * var(--density-scale, 1));
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  font-size:0.75em;
+  font-size: 0.75em;
 }
 
 pre:has(code) {
@@ -519,11 +555,19 @@ pre code {
 }
 
 kbd {
-  --_kbd-border-color: color-mix(in srgb, var(--color-text-normal, currentColor) 20%, #0000);
-  border: var(--border-width-thin, 1px) var(--border-style, solid) var(--_kbd-border-color, currentColor);
-  border-bottom: calc(var(--border-width-thin, 1px) + 1px) solid color-mix(in srgb, var(--color-text-normal, currentColor) 20%, transparent);
-  border-radius: min(calc(var(--form-control-toggle-size, 1.125rem) * 0.375),
-      var(--radius-md, 0.25rem));
+  --_kbd-border-color: color-mix(
+    in srgb,
+    var(--color-text-normal, currentColor) 20%,
+    #0000
+  );
+  border: var(--border-width-thin, 1px) var(--border-style, solid)
+    var(--_kbd-border-color, currentColor);
+  border-bottom: calc(var(--border-width-thin, 1px) + 1px) solid
+    color-mix(in srgb, var(--color-text-normal, currentColor) 20%, transparent);
+  border-radius: min(
+    calc(var(--form-control-toggle-size, 1.125rem) * 0.375),
+    var(--radius-md, 0.25rem)
+  );
   font-size: 0.825em;
   display: inline-flex;
   gap: calc(var(--space-3xs, 0.25rem) * var(--density-scale, 1));
@@ -589,7 +633,8 @@ svg[role="img"] {
    ============================================ */
 
 table {
-  border: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
+  border: var(--border-width-thin, 1px) var(--border-style, solid)
+    var(--color-border-normal, currentColor);
   border-collapse: collapse;
   width: 100%;
 }
@@ -607,23 +652,27 @@ th {
 }
 
 thead th {
-  padding-block:  calc(var(--space-sm, 1rem) * var(--density-scale, 1));
+  padding-block: calc(var(--space-sm, 1rem) * var(--density-scale, 1));
 }
 
 th:not(:only-of-type) {
-  border-block-end: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
+  border-block-end: var(--border-width-thin, 1px) var(--border-style, solid)
+    var(--color-border-normal, currentColor);
 }
 
 th:only-of-type {
-  border-inline-end: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
+  border-inline-end: var(--border-width-thin, 1px) var(--border-style, solid)
+    var(--color-border-normal, currentColor);
 }
 
-:is(th, td)~ :is(th, td) {
-  border-inline-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
+:is(th, td) ~ :is(th, td) {
+  border-inline-start: var(--border-width-thin, 1px) var(--border-style, solid)
+    var(--color-border-normal, currentColor);
 }
 
-tr+tr :is(th, td) {
-  border-block-start: var(--border-width-thin, 1px) var(--border-style, solid) var(--color-border-normal, currentColor);
+tr + tr :is(th, td) {
+  border-block-start: var(--border-width-thin, 1px) var(--border-style, solid)
+    var(--color-border-normal, currentColor);
 }
 
 caption {
@@ -639,7 +688,7 @@ summary {
   cursor: pointer;
 }
 
-[open]>summary {
+[open] > summary {
   margin-block-end: calc(var(--space-xs, 0.75rem) * var(--density-scale, 1));
 }
 
@@ -649,7 +698,8 @@ summary {
 
 dialog {
   background-color: var(--color-bg, Canvas);
-  border: var(--panel-border-width, 1px) var(--border-style, solid) var(--panel-border-color, currentColor);
+  border: var(--panel-border-width, 1px) var(--border-style, solid)
+    var(--panel-border-color, currentColor);
   border-radius: var(--panel-radius, 0.5rem);
   max-height: calc(100% - var(--space-xl, 3rem));
   max-width: calc(100% - var(--space-xl, 3rem));
@@ -709,7 +759,6 @@ dialog:modal::backdrop {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   :after,
   :before {
